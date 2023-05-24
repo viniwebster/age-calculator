@@ -1,0 +1,178 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,700;1,400;1,800&display=swap');
+
+
+:root{
+    --cor-cinza-escuro: hsl(0, 1%, 44%);
+    --cor-cinza-claro: hsl(0, 0%, 86%);
+    --cor-white: hsl(0, 0%, 100%);
+    --cor-off-white: hsl(0, 0%, 94%);
+    --cor-off-black: hsl(0, 0%, 8%);
+    --purple: hsl(259, 100%, 65%);
+    --red: hsl(0, 100%, 67%);
+
+    --fonte-principal: 'Poppins', sans-serif;
+}
+
+
+body {
+    display: flex;
+/*     justify-content: center;
+    align-items: center; */
+    height: 100vh;
+    background-color: var(--cor-off-white);
+    font-family: var(--fonte-principal);
+    box-sizing: border-box;
+}
+
+.container{
+    margin: auto;
+    min-width: 32vw;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    background-color: var(--cor-white);
+    border-radius: 30px 30px 150px 30px;
+}
+
+.date{
+    display: flex;
+    gap: 32px;
+}
+
+label{
+    color: var(--cor-cinza-escuro);
+}
+
+input {
+    width: 130px;
+    height: 60px;
+    border-radius: 7px;
+    border-style: solid;
+    border: .5px solid var(--cor-cinza-claro);
+    outline-color: var(--purple);
+    box-sizing: border-box;
+    padding: 1.5rem;
+    font-size: 1.2rem;
+    font-weight: 800;    
+}
+
+/* input::-webkit-inner-spin-button { 
+    -webkit-appearance: none;
+    
+} */
+
+input::placeholder{
+    color: var(--cor-cinza-claro);
+    font-size: 1rem;
+}
+
+
+.error{
+    font-size: .8rem;
+    color: var(--red);
+    position: absolute;
+}
+
+
+.age_container{
+    display: flex;
+    align-items: center;
+}
+
+.border{
+    height: 1px;
+    background-color: var(--cor-cinza-claro);
+    flex: 1;
+}
+
+#button:hover{
+    transition: .3s;
+    background-color: var(--cor-off-black);
+}
+
+.image{
+    background-color: var(--purple);
+    padding: 1rem;
+    border-radius: 50px;
+    cursor: pointer;
+}
+
+.age_infos-item{
+    font-size: 4.5rem;
+    font-weight: 800;
+    font-style: italic;
+    margin: 0;
+}
+
+.age_infos-item span{
+    color: var(--purple);
+}
+
+@media screen and (max-width: 430px) {
+  
+    
+    .container {
+        min-width: 70vw;
+        gap: 35px;
+    }
+
+    .date{
+        gap: 0;
+        justify-content: space-between;
+    }
+
+    
+    label{
+        font-size: 1rem;
+    }
+
+    input{
+        width: 80px;
+        font-size: 1rem;
+        padding: 1rem;
+    }
+    input::placeholder{    
+        color: var(--cor-cinza-claro);
+        font-size: .7rem;
+    }
+
+    input::-webkit-inner-spin-button { 
+        
+    -webkit-appearance: none;
+    
+    }
+
+    .error {
+        width: 80px;
+    }
+
+    .age_infos-item{
+        font-size: 2.5rem;
+    }
+
+    .age_container{
+        margin: 30px 0;
+        justify-content: center;
+    }
+
+    .image{      
+    position: absolute;  
+    width: 35px;
+    padding: .8rem;
+    }
+
+}
+
+@media screen and (max-width: 330px){
+
+    input{
+        width: 70px;
+        font-size: 1rem;
+        padding: 1rem;
+    }
+
+    .age_infos-item{
+        font-size: 2rem;
+    }
+}
