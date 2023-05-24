@@ -23,8 +23,8 @@ button.addEventListener('click', ()=>{
     const monthsPassed = dateFns.differenceInMonths(new Date(currentYear, currentMonth, currentDay), 
     new Date(yearsInput.value, monthsInput.value, dayInput.value));
 
-    /* const yearsPassed = dateFns.differenceInYears(new Date(currentYear, currentMonth, currentDay), 
-    new Date(yearsInput.value, monthsInput.value, dayInput.value)); */
+    const yearsPassed = dateFns.differenceInYears(new Date(currentYear, currentMonth, currentDay), 
+    new Date(yearsInput.value, monthsInput.value, dayInput.value));
    
     const days = Math.floor(daysPassed % 30.4375);
     const months = Math.floor(monthsPassed % 12);

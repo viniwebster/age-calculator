@@ -97,8 +97,7 @@ input::placeholder{
     color: var(--purple);
 }
 
-@media screen and (max-width: 430px) {
-     
+@media screen and (max-width: 430px) {     
     .container {
         min-width: 70vw;
         gap: 35px;
@@ -122,7 +121,6 @@ input::placeholder{
         color: var(--cor-cinza-claro);
         font-size: .7rem;
     }
-
     input::-webkit-inner-spin-button {        
     -webkit-appearance: none;  
     }
@@ -149,7 +147,6 @@ input::placeholder{
 }
 
 @media screen and (max-width: 330px){
-
     input{
         width: 70px;
         font-size: 1rem;

@@ -1,5 +1,6 @@
 const inputs = document.querySelectorAll('input');
 
+
 const messages = {
     day: {
         valueMissing: "Insert a day",
@@ -16,11 +17,13 @@ const messages = {
     }
 }
 
+
 const typesOfError = [
     'valueMissing',
     'rangeOverflow',
     'rangeUnderflow'
 ]
+
 
 inputs.forEach((input)=>{
     input.addEventListener('input', () => validForm(input));
