@@ -1,6 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,700;1,400;1,800&display=swap');
 
-
 :root{
     --cor-cinza-escuro: hsl(0, 1%, 44%);
     --cor-cinza-claro: hsl(0, 0%, 86%);
@@ -9,15 +8,11 @@
     --cor-off-black: hsl(0, 0%, 8%);
     --purple: hsl(259, 100%, 65%);
     --red: hsl(0, 100%, 67%);
-
     --fonte-principal: 'Poppins', sans-serif;
 }
 
-
 body {
     display: flex;
-/*     justify-content: center;
-    align-items: center; */
     height: 100vh;
     background-color: var(--cor-off-white);
     font-family: var(--fonte-principal);
@@ -57,23 +52,16 @@ input {
     font-weight: 800;    
 }
 
-/* input::-webkit-inner-spin-button { 
-    -webkit-appearance: none;
-    
-} */
-
 input::placeholder{
     color: var(--cor-cinza-claro);
     font-size: 1rem;
 }
-
 
 .error{
     font-size: .8rem;
     color: var(--red);
     position: absolute;
 }
-
 
 .age_container{
     display: flex;
@@ -110,8 +98,7 @@ input::placeholder{
 }
 
 @media screen and (max-width: 430px) {
-  
-    
+     
     .container {
         min-width: 70vw;
         gap: 35px;
@@ -121,8 +108,7 @@ input::placeholder{
         gap: 0;
         justify-content: space-between;
     }
-
-    
+  
     label{
         font-size: 1rem;
     }
@@ -137,10 +123,8 @@ input::placeholder{
         font-size: .7rem;
     }
 
-    input::-webkit-inner-spin-button { 
-        
-    -webkit-appearance: none;
-    
+    input::-webkit-inner-spin-button {        
+    -webkit-appearance: none;  
     }
 
     .error {
