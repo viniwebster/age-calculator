@@ -6,29 +6,22 @@ const monthsInput = document.getElementById('month');
 const yearsInput = document.getElementById('year');
 const button = document.getElementById('button');
 
-//date
-const data = new Date();
-const currentYear = data.getFullYear();
-const currentMonth = data.getMonth() + 1;
-const currentDay = data.getUTCDate();
-
 
 button.addEventListener('click', ()=>{
-    
-    const daysPassed = dateFns.differenceInDays(
-        new Date(currentYear, currentMonth, currentDay),
-        new Date(yearsInput.value, monthsInput.value, dayInput.value)
-    );
-    
-    const monthsPassed = dateFns.differenceInMonths(new Date(currentYear, currentMonth, currentDay), 
-    new Date(yearsInput.value, monthsInput.value, dayInput.value));
 
-    const yearsPassed = dateFns.differenceInYears(new Date(currentYear, currentMonth, currentDay), 
-    new Date(yearsInput.value, monthsInput.value, dayInput.value));
-   
-    const days = Math.floor(daysPassed % 30.4375);
-    const months = Math.floor(monthsPassed % 12);
-    const years = Math.floor(monthsPassed / 12)
+    let curretDate = new Date()
+    const birthday = new Date(yearsInput.value, monthsInput.value -1, dayInput.value);
+    const ageInMs = curretDate.getTime() - birthday.getTime();
+    
+    const ageInSeconds = ageInMs / 1000;
+    const ageInMins = ageInSeconds / 60;
+    const ageInHours = ageInMins / 60;
+    const ageInDays = ageInHours / 24;
+    const ageInMonths = ageInDays / 30.4375;
+  
+    const days = Math.floor(ageInDays % 30.4375);
+    const months = Math.floor(ageInMonths % 12);
+    const years = Math.floor(ageInMonths / 12)
 
     addInfos(years, months, days)
 })
